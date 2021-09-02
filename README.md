@@ -3,7 +3,7 @@
 ## Configure jenkin job with shell command
 
 ```
-sudo rm -rf jenkin-ansible
+sudo rm -rf jenkins-ansible-maven-sample-project
 git clone https://github.com/vamsikrishna2929/jenkins-ansible-maven-sample-project.git
 cd jenkins-ansible-maven-sample-project
 sudo ansible-playbook play-book.yaml -b
