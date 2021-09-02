@@ -1,6 +1,6 @@
 ---
 - name: Installation
-  hosts: all
+  hosts: localhost
   tasks:
   - name: Installation
     apt:
