@@ -4,7 +4,7 @@
 
 ```
 sudo rm -rf jenkin-ansible
-git clone https://gitlab.com/veeru91/jenkin-ansible.git
+git clone https://github.com/vamsikrishna2929/jenkins-ansible-maven-sample-project.git
 cd jenkin-ansible
 sudo ansible-playbook play-book.yaml -b
 ```
