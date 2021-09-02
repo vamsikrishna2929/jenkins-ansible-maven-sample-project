@@ -1,0 +1,24 @@
+---
+- name: Installation
+  hosts: localhost
+  tasks:
+  - name: Installation
+    apt:
+      name: "{{item.a}}"
+      state: "{{item.b}}"
+      update_cache: "{{item.c}}"
+    with_items:
+      - {a: git, b: present, c: no}
+      - {a: maven, b: latest, c: no}
+      - {a: tomcat9, b: present, c: no}
+  #- name: Clone hello-world maven project from github
+   # git:
+    #  repo: 'https://gitlab.com/veeru91/jenkin-ansible.git'
+     # dest: .
+  - name: maven build
+    command: bash -lc "mvn clean && mvn compile && mvn package && cp target/java-tomcat-maven-example.war /var/lib/tomcat9/webapps"
+  - name: Restart tomcat9
+    service:
+     name: tomcat9
+     state: restarted
+...  
