@@ -5,24 +5,7 @@
   
   tasks:
   
-  - name: Update APT Cache
-  apt:
-    update_cache: yes
-    force_apt_get: yes
-
-- name: Remove apt lock file
-  file:
-    state: absent
-    path: "/var/lib/dpkg/lock"
-
-- name: Upgrade all packages to the latest version
-  apt:
-    name: "*"
-    state: latest
-    force_apt_get: yes
-    
-  
-  - name: Installation git maven tomcat
+  - name: Installation 
     apt:
       name: "{{item.a}}"
       state: "{{item.b}}"
