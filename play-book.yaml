@@ -1,7 +1,6 @@
 ---
 - name: Installation
-  ansible_become_user: root
-  ansible_become_password: "{{1234567}"
+ 
   hosts: all
   tasks:
   - name: Installation
