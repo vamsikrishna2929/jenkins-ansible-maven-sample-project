@@ -2,6 +2,9 @@
 - name: Installation
  
   hosts: all
+  
+  tasks:
+  
   - name: Update APT Cache
   apt:
     update_cache: yes
@@ -18,7 +21,7 @@
     state: latest
     force_apt_get: yes
     
-  tasks:
+  
   - name: Installation
     apt:
       name: "{{item.a}}"
