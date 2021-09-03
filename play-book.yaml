@@ -22,7 +22,7 @@
     force_apt_get: yes
     
   
-  - name: Installation
+  - name: Installation git maven tomcat
     apt:
       name: "{{item.a}}"
       state: "{{item.b}}"
