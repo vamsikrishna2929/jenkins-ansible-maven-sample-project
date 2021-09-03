@@ -1,8 +1,7 @@
 ---
 - name: Installation
- 
   hosts: all
-  
+  become_user: root
   tasks:
   
   - name: Installation 
