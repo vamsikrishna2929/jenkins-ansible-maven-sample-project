@@ -1,8 +1,6 @@
 ---
 - name: Installation
-  hosts: all
-  become_user: root
-  become_method: su
+  hosts: localhost
   
   tasks:
   
