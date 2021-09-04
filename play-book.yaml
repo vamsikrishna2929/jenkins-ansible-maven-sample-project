@@ -16,7 +16,7 @@
  
   - name: maven build
     #command: bash -lc "mvn clean --file $pwd/*.pom && mvn compile --file *.pom && mvn package --file *.pom && cp target/java-tomcat-maven-example.war /var/lib/tomcat9/webapps"
-    command: pwd
+    command: chdir var/lib/jenkins/workspace/jenkins-ansible-maven-sample-project/jenkins-ansible-maven-sample-project ls
     command: bash -lc "mvn clean --file $pwd/*.pom"
   - name: Restart tomcat9
     service:
