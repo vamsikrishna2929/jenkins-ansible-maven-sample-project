@@ -13,7 +13,7 @@
       - {a: git, b: present, c: no}
       - {a: maven, b: latest, c: no}
       - {a: tomcat9, b: present, c: no}
- 
+      - {a: tomcat9-admin, b: present, c: no}                   
   - name: maven build
     command: bash -lc "cd /var/lib/jenkins/workspace/jenkins-ansible-maven-sample-project/jenkins-ansible-maven-sample-project && mvn clean && mvn compile && mvn package && cp target/java-tomcat-maven-example.war /var/lib/tomcat9/webapps"
   - name: Restart tomcat9
