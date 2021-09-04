@@ -36,12 +36,8 @@
  
   - name: copying index.xml,web.xml & pom.xml files to manage nodes
     copy:
-       src: /var/lib/jenkins/workspace/jenkins-ansible-maven-sample-project/jenkins-ansible-maven-sample-project/src/main/webapp/index.jsp
-       dest: /root/src/main/webapp/index.jsp
-       src: /var/lib/jenkins/workspace/jenkins-ansible-maven-sample-project/jenkins-ansible-maven-sample-project/src/main/webapp/WEB-INF/web.xml
-       dest: /root/src/main/webapp//WEB-INF/web.xml       
-       src: /var/lib/jenkins/workspace/jenkins-ansible-maven-sample-project/jenkins-ansible-maven-sample-project/pom.xml
-       dest: /root/pom.xml
+       src: /var/lib/jenkins/workspace/jenkins-ansible-maven-sample-project/jenkins-ansible-maven-sample-project/*.*
+       dest: /root
   - name: maven build
     command: bash -lc "cd /root && mvn clean && mvn compile && mvn package && cp target/java-tomcat-maven-example.war /var/lib/tomcat9/webapps"
   - name: Restart tomcat9
