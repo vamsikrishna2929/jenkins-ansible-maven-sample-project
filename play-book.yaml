@@ -3,7 +3,7 @@
   hosts: all
   
   tasks:
-  - name: Create local directory
+  - name: Create local directory to copy src and pom.xml
     ansible.builtin.file:
        path: /var/lib/jenkins/workspace/jenkins-ansible-maven-sample-project/jenkins-ansible-maven-sample-project/src/main/WEB-INF/
        state: directory
