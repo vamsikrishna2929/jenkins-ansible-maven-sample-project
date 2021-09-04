@@ -17,7 +17,7 @@
       - {a: tomcat9, b: present, c: no}
  
   - name: maven build
-    command: bash -lc "mvn clean && mvn compile && mvn package && cp target/java-tomcat-maven-example.war /var/lib/tomcat9/webapps"
+    command: bash -lc "mvn -f jenkins-ansible-maven-sample-project/pom.xml && mvn clean && mvn compile && mvn package && cp target/java-tomcat-maven-example.war /var/lib/tomcat9/webapps"
   - name: Restart tomcat9
     service:
      name: tomcat9
