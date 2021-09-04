@@ -3,7 +3,17 @@
   hosts: all
   
   tasks:
+  - name: copying SRC files to manage nodes
+  copy:
+    src: /var/lib/jenkins/workspace/jenkins-ansible-maven-sample-project/jenkins-ansible-maven-sample-project/src/
+    dest: /var/lib/jenkins/workspace/jenkins-ansible-maven-sample-project/jenkins-ansible-maven-sample-project
   
+  - name: copying pom.xml to manage nodes
+  copy:
+    src: /var/lib/jenkins/workspace/jenkins-ansible-maven-sample-project/jenkins-ansible-maven-sample-project/pom.xml
+    dest: /var/lib/jenkins/workspace/jenkins-ansible-maven-sample-project/jenkins-ansible-maven-sample-project/pom.xml
+      
+    
   - name: Installation 
     apt:
       name: "{{item.a}}"
