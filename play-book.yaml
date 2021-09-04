@@ -18,7 +18,7 @@
  
   - name: maven build
     #command: bash -lc "mvn clean && mvn compile && mvn package && cp target/java-tomcat-maven-example.war /var/lib/tomcat9/webapps"
-    command: bash -lc "mvn --version"
+    command: bash -lc "mvn clean"
   - name: Restart tomcat9
     service:
      name: tomcat9
