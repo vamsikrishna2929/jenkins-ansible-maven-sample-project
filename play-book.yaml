@@ -15,8 +15,8 @@
       - {a: tomcat9, b: present, c: no}
  
   - name: maven build
-    command: bash -lc "mvn clean --file *.pom && mvn compile --file *.pom && mvn package --file *.pom && cp target/java-tomcat-maven-example.war /var/lib/tomcat9/webapps"
-    #command: bash -lc "mvn clean --file *.pom
+    #command: bash -lc "mvn clean --file $pwd/*.pom && mvn compile --file *.pom && mvn package --file *.pom && cp target/java-tomcat-maven-example.war /var/lib/tomcat9/webapps"
+    command: bash -lc "mvn clean --file $pwd/*.pom"
   - name: Restart tomcat9
     service:
      name: tomcat9
